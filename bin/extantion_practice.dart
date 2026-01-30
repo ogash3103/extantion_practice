@@ -1,23 +1,13 @@
-extension PhoneValidator on String {
- bool get isPhone {
-  final value = replaceAll(RegExp(r'\s+'), '');
+import 'package:extantion_practice/extantion_1.dart';
 
-  final phoneRegex = RegExp(
-    r'^(\+?\d{1,3})?[-]?\d{2,3}[-]?\d{3}[-]?\d{2}[-]?\d{2}$',
-  );
-
-  return phoneRegex.hasMatch(value);
- }
-
-}
-
-void main(){
-  print('+998901234567'.isPhone); // true
-  print('998901234567'.isPhone);  // true
-  print('90 123 45 67'.isPhone);  // true
-  print('90-123-45-67'.isPhone);  // true
-
-  print('abc123'.isPhone);        // false
-  print('+99890abc456'.isPhone);  // false
-  print('12345'.isPhone);
+void main() {
+ final example1 = Myclass('Ogabek');
+ final text = 'hello PDP';
+ example1.add(5, 2);
+ example1.info();
+ print(text.capitalize());
+ print(text.zeros(12));
+ print(StringCase(text).capitalize());
+ 
+ print(2.isPrime);
 }
